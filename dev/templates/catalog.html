@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  @@include('blocks/head.html')
+  <body>
+    <a href="#" class="arrow-up"><i class="icon icon-arr-up"></i>наверх</a>
+    @@include('blocks/header.html')
+    <div class="container catalog">
+      <div class="row">
+        <div class="col-sm-12">
+          <ul class="breadcrumb">
+            <li><a href="index.html"><i class="glyphicon glyphicon-home"></i></a></li>
+            <li><a href="catalog.html">каталог</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="price-link-image price-link-image--left">
+            <a href="price.html#bread"><img src="images/cat-bread.jpg" alt="птд"></a>
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="price-link-image price-link-image--right">
+            <a href="price.html#cond"><img src="images/cat-cond.jpg" alt="птд"></a>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-12 cat-text-wrapper">
+          <div class="col-sm-10 col-sm-push-1">
+            <div class="cat-text">В нашем каталоге Вы найдете всю необходимую Вам информацию о продукции. Вы сможете ознакомиться с нашим ассортиментом и по достоинству оценить качество и вкус хлебобулочных и кондитерских изделий!</div>
+            <div class="cat-text">МЫ РАДЫ ВАМ! Зайдите и оцените ширину ассортимента</div>
+         </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-3 col-sm-push-9">
+          <a href="price.html" class="btn cat-btn pull-right"><i class="icon icon-price-black"></i>прайс лист</a>
+        </div>
+      </div>
+    </div>
+    @@include('blocks/footer.html')
+  </body>
+
+</html>

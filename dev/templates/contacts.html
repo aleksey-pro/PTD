@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  @@include('blocks/head.html')
+  <body onload="yaMaps()">
+    <a href="#" class="arrow-up"><i class="icon icon-arr-up"></i>наверх</a>
+    @@include('blocks/header.html')
+    <div class="container contacts">
+      <div class="row">
+        <div class="col-sm-12">
+          <ul class="breadcrumb">
+            <li><a href="index.html"><i class="glyphicon glyphicon-home"></i></a></li>
+            <li><a href="contacts.html">контакты</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="row contacts-place">
+        <div class="col-sm-5 place-bcentr">
+          <img src="../images/cont-bc.jpg" alt="птд">
+        </div>
+        <div class="col-sm-7 place-fields">
+          <div class="place-title">КОНТАКТЫ</div>
+          <div class="place-addr">АДРЕС ОФИСА: 195273, Россия, город Санкт-Петербург, Пискарёвский пр., д. 63, лит. А.<br>(Красногвардейский район)</div>
+          <div class="place-pones">ТЕЛЕФОНЫ ОТДЕЛА ПРОДАЖ: <p>+7 (921) 575-99-45</p><p>+7 (921) 320-94-93</p></div>
+          <div class="place-mail">E-MAIL: ptd@fgr.ru</div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-12">
+          <div id="map"></div><!--  style="width: 600px; height: 400px" -->
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-9 contacts-order">
+          <div class="order-title">ОСТАВИТЬ ЗАЯВКУ</div>
+          <form class="order-form" id="form" method="post" action="">
+            <input type="text" name="name" placeholder="Имя">
+            <input type="phone" name="phone" placeholder="Телефон">
+            <input type="email" name="email" placeholder="E-mail">
+            <textarea name="mess" rows="2" placeholder="Текст"></textarea>
+            <span class="info"></span><input type="submit" value="Отправить">
+          </form>
+        </div>
+        <div class="col-sm-3 order-postbox">
+          <div class="icon icon-postbox"></div>
+        </div>
+      </div>
+    </div>
+    @@include('blocks/footer.html')
+  </body>
+
+</html>

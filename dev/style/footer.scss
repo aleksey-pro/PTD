@@ -1,0 +1,86 @@
+//footer
+
+.footer {
+  height: 195px;
+  background-color: #2d2d2d;
+  color: #ffffff;
+}
+
+.footer-menu {
+  @include down-shadow();
+}
+
+.navbar-footer {
+  line-height: 70px;
+  text-transform: uppercase;
+
+  li a {
+    padding: 0;
+    color: #ffffff;
+    font-size: 1.09em;
+    &:hover {
+      color: #afafaf;
+      background-color: transparent;
+    }
+    &:focus {
+      color: #afafaf;
+      background-color: transparent;
+    }
+  }
+}
+
+
+.navbar-footer > li {
+  &:hover {
+    color: #ffffff;
+    background-color: transparent;
+  }
+  &:focus {
+    background-color: transparent;
+    border: none;
+  }
+    &:active {
+    color: #ff0025;
+    background-color: transparent;
+  }
+}
+
+.footer-bottom {
+  margin-top: 40px;
+
+  &__name {
+    text-align: center;
+    line-height: 40px;
+
+  }
+  &__phones {
+    text-align: right;
+  }
+}
+
+.arrow-up {
+  text-transform: uppercase;
+  color: #2d2d2d;
+  position: fixed;
+  bottom: 207px;
+  right: 15px;
+  text-align: center;
+  z-index: 999;
+  opacity: 0.7;
+
+  &:hover {
+    text-decoration: none;
+    color: inherit;
+    opacity: 1;
+  }
+
+  @media all and (max-width: 1200px) {
+    right: 0;
+  }
+
+  .icon {
+    display: block;
+  }
+
+
+}

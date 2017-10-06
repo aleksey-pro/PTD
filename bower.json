@@ -1,0 +1,21 @@
+{
+  "name": "p-t-d",
+  "description": "site for spb trade house",
+  "main": "index.html",
+  "authors": [
+    "aleksey isaev"
+  ],
+  "license": "MIT",
+  "homepage": "no",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "normalize-css": "normalize.css#^4.2.0"
+  }
+}

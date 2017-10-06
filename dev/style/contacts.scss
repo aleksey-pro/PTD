@@ -1,0 +1,74 @@
+.contacts-place {
+  margin-top: 10px;
+
+}
+
+
+.place-fields {
+  font-size: 0.85em;
+  padding-left: 35px;
+
+  &>div {
+    margin-bottom: 15px;
+  }
+
+  p {
+    margin: 0;
+  }
+}
+
+
+.place-title {
+  font-size: 1.69em;
+}
+
+
+#map {
+  height: 392px;
+  box-shadow: 0 0 12px;
+}
+
+
+.order-title {
+  font-size: 1.74em;
+  margin: 45px 0;
+}
+
+.order-form {
+  input, textarea {
+    display: block !important;
+    margin-bottom: 12px;
+    width: 100%;
+    line-height: 35px;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid #cccccc;
+    padding-left: 15px;
+
+
+    &:focus {
+      border-color: #000000;
+    }
+  }
+
+  input[type="submit"] {
+    margin: 20px 0;
+    background-color: #8b8b8b;
+    color: #fff;
+    width: 165px;
+    float: right;
+
+    &:hover {
+      background-color: darken(#8b8b8b, 10%);
+    }
+  }
+}
+
+
+.order-postbox {
+  text-align: right;
+}
+
+.icon-postbox {
+  margin-top: 95px;
+}

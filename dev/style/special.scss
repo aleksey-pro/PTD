@@ -1,0 +1,28 @@
+.special__banner {
+  margin-top: 55px;
+  margin-bottom: 25px;
+  img {
+    position: relative;
+  }
+
+}
+
+.special__title {
+  font-family:'Conv_CYRIL',Sans-Serif;
+  font-size: 2.14em;
+  position: absolute;
+  top: 0;
+  left: 15x;
+  z-index: 100;
+}
+
+.special__buttons {
+  width: 420px;
+  position: absolute;
+  bottom: 0;
+  right: 15px;
+
+  .icon-price-black{
+    margin-right: 5px;
+  }
+}

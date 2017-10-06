@@ -1,0 +1,79 @@
+@import "bootstrap";
+@import "sprite";
+
+@import url('https://fonts.googleapis.com/css?family=PT+Serif+Caption');
+
+@font-face {
+  font-family: 'Conv_CYRIL';
+  src: url('../fonts/CYRIL.eot');
+  src: local('☺'), url('../fonts/CYRIL.woff') format('woff'), url('../fonts/CYRIL.ttf') format('truetype'), url('../fonts/CYRIL.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Glyphicons Halflings';
+  src: url('../fonts/glyphicons-halflings-regular.eot');
+  src: url('../fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('../fonts/glyphicons-halflings-regular.woff2') format('woff2'), url('../fonts/glyphicons-halflings-regular.woff') format('woff'), url('../fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('../fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
+}
+
+a {
+  &:focus {
+    outline: none;
+    background-color: transparent;
+  }
+}
+
+
+@mixin down-shadow() {
+  box-shadow: 0 3px 20px rgba(0, 0, 0, 0.5);
+}
+
+img {
+  width: 100%;
+}
+
+ul {
+    list-style-type: none;
+    -webkit-margin-before: 0;
+    -moz-margin-before: 0;
+    -webkit-margin-after: 0;
+    -moz-margin-after: 0;
+    -webkit-margin-start: 0;
+    -moz-margin-start: 0;
+    -webkit-margin-end: 0;
+    -moz-margin-end: 0;
+  -webkit-padding-start: 0;
+    -moz-padding-start: 0;
+
+    & li {
+    margin         : 0;
+    padding        : 0;
+        border         : 0;
+        font-size      : 100%;
+        font           : inherit;
+        vertical-align : baseline;
+    }
+}
+
+body {
+  background-color: #ffffff;
+  font-family: Arial, sans-serif;
+  color: #000000;
+}
+
+.icon {
+  display: inline-block;
+  margin-right: 4px;
+  vertical-align: middle;
+}
+
+
+@import "header";
+@import "main";
+@import "price";
+@import "catalog";
+@import "special";
+@import "contacts";
+@import "footer";
+

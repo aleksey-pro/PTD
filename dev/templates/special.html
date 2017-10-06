@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  @@include('blocks/head.html')
+  <body>
+    <a href="#" class="arrow-up"><i class="icon icon-arr-up"></i>наверх</a>
+    @@include('blocks/header.html')
+    <div class="container special">
+      <div class="row">
+        <div class="col-sm-12">
+          <ul class="breadcrumb">
+            <li><a href="index.html"><i class="glyphicon glyphicon-home"></i></a></li>
+            <li><a href="special.html">спецпредложения</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-12 special__banner">
+        <div class="special__title">Вафельный батончик</div>
+        <img src="images/special-banner.jpg" alt="птд">
+        <div class="special__buttons">
+          <a href="catalog.html" class="btn cat-btn"><i class="icon icon-catalog-black"></i>перейти к странице товара в каталоге</a>
+          <a href="price.html" class="btn cat-btn"><i class="icon icon-price-black"></i>перейти к странице товара в прайс-листе</a>
+        </div>
+        </div>
+      </div>
+    </div>
+    @@include('blocks/footer.html')
+  </body>
+
+</html>

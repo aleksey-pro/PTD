@@ -1,0 +1,58 @@
+.catalog {
+  .breadcrumb {
+    margin-bottom: 18px;
+  }
+}
+
+.cat-text-wrapper {
+  height: 212px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  margin-bottom: 20px;
+  background: #fff url(../images/cat-beresta.jpg) center center no-repeat;
+}
+
+.cat-text {
+  margin: 25px 0;
+  font-family:'Conv_CYRIL',Sans-Serif;
+  font-size: 1.28em;
+}
+
+
+.cat-btn {
+  border: 1px solid #000;
+  text-align: center;
+  width: 100%;
+  margin-bottom: 20px;
+  color: #000;
+  text-transform: uppercase;
+  padding: 6px 25px;
+  transition: all 0.5s ease-in-out;
+
+  &:hover {
+    background-color: #bfbfbf;
+  }
+}
+
+.price-link-image {
+  margin-bottom: 18px;
+  transition: all 0.5s ease-in-out;
+
+  &--left {
+    margin-right: -15px;
+  }
+
+  &--right {
+    margin-left: -15px;
+  }
+
+  &:hover {
+    box-shadow: 0 0 20px;
+  }
+
+}
+
+
+.icon-price-black {
+  margin-right: 40px;
+}
