@@ -1,48 +1,108 @@
 //footer
 
 .footer {
-  height: 195px;
   background-color: #2d2d2d;
   color: #ffffff;
+  font-family: 'PT Serif Caption', serif;
+}
+
+.footer-container {
+  margin-bottom: 20px;
 }
 
 .footer-menu {
-  @include down-shadow();
+  box-shadow: 0 3px 20px rgba(0, 0, 0, 1);
 }
 
 .navbar-footer {
+
   line-height: 70px;
   text-transform: uppercase;
+  position: relative;
+  margin: 0 -15px 0 -15px;
 
-  li a {
-    padding: 0;
-    color: #ffffff;
-    font-size: 1.09em;
-    &:hover {
-      color: #afafaf;
-      background-color: transparent;
+  li {
+    width: 200px;
+  }
+
+  @media all and (max-width: 1250px) {
+    li {
+      width: 180px;
     }
-    &:focus {
-      color: #afafaf;
-      background-color: transparent;
+  }
+
+  @include md-desktops {
+    li {
+      width: 145px;
     }
   }
 }
 
-
-.navbar-footer > li {
+.navbar-footer li a {
+  padding: 0;
+  color: #ffffff;
+  font-size: 1em;
   &:hover {
-    color: #ffffff;
+    color: #afafaf;
     background-color: transparent;
   }
   &:focus {
-    background-color: transparent;
-    border: none;
-  }
-    &:active {
-    color: #ff0025;
+    color: #afafaf;
     background-color: transparent;
   }
+  &.active {
+    color: #ff0025!important;
+    background-color: transparent;
+  }
+  @include md-desktops {
+    font-size: 0.8em;
+  }
+}
+
+.navbar-footer li.active {
+  a:focus {
+    background-color: transparent;
+  }
+  a:hover {
+    background-color: transparent;
+  }
+
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,ffffff+100&0.3+0,0+5,0+95,0.3+100 */
+  background: -moz-linear-gradient(left,  rgba(255,255,255,0.3) 0%, rgba(255,255,255,0) 5%, rgba(255,255,255,0) 95%, rgba(255,255,255,0.3) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(left,  rgba(255,255,255,0.3) 0%,rgba(255,255,255,0) 5%,rgba(255,255,255,0) 95%,rgba(255,255,255,0.3) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right,  rgba(255,255,255,0.3) 0%,rgba(255,255,255,0) 5%,rgba(255,255,255,0) 95%,rgba(255,255,255,0.3) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4dffffff', endColorstr='#4dffffff',GradientType=1 ); /* IE6-9 */
+
+}
+
+@include xs-tablets() {
+  .navbar-footer {
+    line-height: 40px;
+  }
+}
+
+.navbar-footer li:after  {
+  content: '';
+  display: block;
+  background-image: url(../images/sprite.png);
+  background-position: -231px -176px;
+  width: 1px;
+  height: 70px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+.navbar-footer li:first-child:before {
+  content: '';
+  display: block;
+  background-image: url(../images/sprite.png);
+  background-position: -231px -176px;
+  width: 1px;
+  height: 70px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
 }
 
 .footer-bottom {
@@ -51,12 +111,26 @@
   &__name {
     text-align: center;
     line-height: 40px;
-
+    font-family: 'Conv_CYRIL';
+    font-size: 1.71em;
   }
+
   &__phones {
     text-align: right;
   }
 }
+
+
+  @include xs-tablets {
+    .footer-bottom__contacts {
+      text-align: center;
+      margin-top: 10px;
+    }
+    .footer-bottom__phones {
+      text-align: center;
+    }
+  }
+
 
 .arrow-up {
   text-transform: uppercase;
@@ -74,13 +148,13 @@
     opacity: 1;
   }
 
-  @media all and (max-width: 1200px) {
-    right: 0;
-  }
-
   .icon {
     display: block;
   }
+}
 
-
+@include md-desktops() {
+  .arrow-up {
+    right: 0;
+  }
 }

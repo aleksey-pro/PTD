@@ -2,6 +2,10 @@
 
 .price__head {
   line-height: 70px;
+
+  @include phones {
+    line-height: 40px;
+  }
 }
 
 .price__title {
@@ -27,7 +31,6 @@
   margin-right: 0;
   margin-left: 4px;
 }
-
 
 
 
@@ -83,47 +86,73 @@
   display: none;
 }
 
-.trigger-head {
-  // background-color: #ececec;
-  border: 1px solid #000000;
+.accordeon__trigger {
+  border: 1px solid #7b7b7b;
   position: relative;
+  display: block;
+  transition: all 0.5s ease-in-out;
+
+  &:hover {
+    background-color: #e0e0e0;
+  }
+
+  &:focus {
+    color: red;
+  }
 
   &:after {
     content: "";
     display: block;
     background-image: url(../images/sprite.png);
-    background-position: -274px -138px;
+    background-position: -359px -59px;
     width: 8px;
     height: 16px;
     position: absolute;
     right: 48px;
     top: 50%;
     margin-top: -8px;
+
+
+    @include phones {
+      right: 15px;
+    }
   }
 }
 
 .trigger-head__button {
-  margin-left: 40px;
   border-left: 1px solid #000;
+
+  @include phones {
+    margin-left: 10px;
+  }
 
   a {
     color: inherit;
     text-decoration: none;
-    text-align: center;
-    margin-left: 40px;
+    display: block;
+    position: relative;
+    height: 60px;
+    width: 80px;
+    font-size: 0.6em;
+
+    @include phones {
+      margin-left: 10px;
+    }
   }
 }
 
+.icon-price-black {
+  font-size: 0.6em;
+  padding-top: 5px;
 
-.icon-price-black:after {
-  content: "каталог";
-  font-size: 0.5em;
-  margin-left: -2px;
+  @include phones {
+    margin-right: 10px;
+  }
 }
 
 .arrow-active:after {
-  background-image: url(../images/sprite.png)!important;
-  background-position: -242px -156px;
+  background-image: url(../images/sprite.png);
+  background-position: -312px -112px;
   width: 15px;
   height: 8px;
 }
@@ -150,6 +179,11 @@
   position: absolute;
   right: 0;
   bottom: 0;
+
+  &:hover {
+    color: red;
+    text-decoration: underline;
+  }
 }
 
 .accordeon-header {
@@ -157,6 +191,12 @@
   text-align: center;
   border: 1px solid #000000;
   position: relative;
+
+  @include phones {
+    font-size: 1.1em;
+    text-align: left;
+    padding-left: 1em;
+  }
 
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#969696+0,e0e0e0+50,969696+100 */
   background: rgb(150,150,150); /* Old browsers */
@@ -177,12 +217,25 @@
 
 
 .table {
-    background-color: rgba(255, 79, 0, 0.4);
+    background-color: #dadada;
 
     thead>tr>td {
       vertical-align: middle;
       padding: 5px 10px;
     }
+}
+
+.column2, .column7, .column10, .column13, .style9 {
+  font-weight: bold;
+}
+
+
+thead {
+  background-color: #a6a6a6;
+}
+
+td, th {
+  border: 1px solid #6b6b6b !important;
 }
 
 

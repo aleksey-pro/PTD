@@ -9,7 +9,7 @@ $(function(){
     trgt.addClass('active');
     setInterval(function(){
       trgt.removeClass('active');
-    }, 500);
+    }, 870);
   }
 
   if(currLoc === '#bread') {
@@ -18,6 +18,27 @@ $(function(){
   }else if(currLoc === '#cond') {
     classToggl($('#cond'));
   }
+
+  //color active pagelinks
+
+  function colrLikn(menu) {
+    menu.each(function() {
+      var currPage = (window.location.pathname).substr(1),
+          addr = $(this).attr('href');
+
+      if(currPage === addr) {
+        $(this).addClass('active');
+        $(this).closest('li').addClass('active');
+      } else if (currPage === "") {
+        menu.first().addClass('active');
+        menu.first().closest('li').addClass('active');
+      }
+    });
+  }
+
+  colrLikn($('.navbar-header a'));
+  colrLikn($('.navbar-footer a'));
+
 
 
   //accordeon
@@ -31,15 +52,15 @@ $(function(){
         items = list.find('.accordeon__item'),
         content = item.find('.accordeon__inner'),
         otherContent = list.find('.accordeon__inner'),
-        arrow = item.find('.trigger-head');
+        arrow = item.find('.accordeon__trigger');
         duration = 500;
 
         if(!item.hasClass('active')) {
-          items.removeClass('active');
+          // items.removeClass('active');
           item.addClass('active');
           arrow.addClass('arrow-active');
 
-          otherContent.stop(true, true).slideUp(duration); //первое true
+          //otherContent.stop(true, true).slideUp(duration); первое true
           // очистит всю последующую очередь, второе - текущая анимация сразу завершится
           content.slideDown(duration);
         }else {
@@ -53,30 +74,89 @@ $(function(){
 
   // price fix
 
-  $('.table').find('.column0, .column12, .column13').hide();
+  // $('.table').find('.column0, .column1, .column4, .column9, .column12, .column13').hide();
+
+  // $('td:empty').css('background-color', 'yellow');
+  // $('.null').hide();
+
+  // hover
+
+  $('.plant-link-image').on('mouseenter mouseleave', function() {
+    var thisImage = $(this);
+    var wrapper = thisImage.closest('.main-content__banner');
+    var otherImages = wrapper.find('.plant-link-image');
+    otherImages.addClass('plant-link-image--active')
+    thisImage.removeClass('plant-link-image--active');
+  });
+
+  $('.plant-links').on('mouseout', function() {
+    var Images = $(this).find('.plant-link-image');
+    Images.removeClass('plant-link-image--active');
+  });
+
+  //scroll arrow
+
+  var arr = $('.arrow-up');
+
+  arr.on('click', function(e) {
+    e.preventDefault();
+    $('html, body').animate({
+       scrollTop: 0
+    }, 1000)
+  });
+
+  $(window).scroll(function() {
+    if( $(this).scrollTop() > 400) {
+    arr.fadeIn();
+  } else
+    arr.fadeOut();
+  });
+
+  function hideArr() {
+    if($(window).width() < 768) {
+      arr.hide();
+    }
+  };
+  hideArr();
+
+  $(window).on('resize', hideArr);
 
   //mailsend
 
   $('#form').on('submit', function(e){
      e.preventDefault();
-     // var fd = new FormData( this );
      $.ajax({
       url: '../send.php',
       type: 'POST',
-      // contentType: false,
-      // processData: false,
-      // data: fd,
       data: $(this).serialize(),
       success: function(msg){
       if(msg == 'ok') {
-        $('.info').text('Отправлено');
+        $('#myModal').modal();
         $('input, textarea').not(':input[type=file], :input[type=submit]').val('');
       } else {
-         $('.info').text('Ошибка');
+          $('#myModal').modal();
+          $('input, textarea').not(':input[type=file], :input[type=submit]').val('');
         }
        }
      });
    });
+
+
+  // center-modals
+
+  // function centerModals(){
+  //   $('.modal').each(function(i){
+  //     var $clone = $(this).clone().css('display', 'block').appendTo('body');
+  //     var top = Math.round(($clone.height() - $clone.find('.modal-content').height()) / 2);
+  //     top = top > 0 ? top : 0;
+  //     $clone.remove();
+  //     $(this).find('.modal-content').css("margin-top", top);
+  //   });
+  // }
+
+  // $(window).on('resize', centerModals);
+
+
 
 }); //ready
 

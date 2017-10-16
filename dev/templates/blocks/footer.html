@@ -1,32 +1,46 @@
 <footer class="footer">
-  <div class="container-fluid footer-menu">
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-12 navbar-footer">
-          <ul class="nav nav-pills nav-justified">
-            <li><a href="index.html" class="active">главная</a></li>
-            <li><a href="catalog.html">каталог</a></li>
-            <li><a href="price.html">прайс-лист</a></li>
+
+  <div class="container-fluid footer-menu hidden-xs">
+    <nav class="navbar navbar-footer">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse collapse-custom" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav navbar-header">
+            <li><a id="index" href="index.html">главная</a></li>
+            <li><a href="catalog.html" id="catalog">каталог</a></li>
+            <li><a href="price.html" id="price">прайс-лист</a></li>
             <li><a href="special.html">спецпредложения</a></li>
             <li><a href="contacts.html">контакты</a></li>
           </ul>
-        </div>
-      </div>
-    </div>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
   </div>
+
+
   <div class="container-fluid footer-bottom">
-    <div class="container">
+    <div class="container footer-container">
       <div class="row">
-        <div class="col-sm-4 footer-bottom__contacts">
+        <div class="col-sm-4 col-xs-12 footer-bottom__contacts">
           <div class="footer-bottom__addr"><i class="icon icon-map-f"></i>Пискаревский пр., 63</div>
           <div class="footer-bottom__email"><i class="icon icon-mail-f"></i>E-mail: ptd@fgr.ru</div>
         </div>
-        <div class="footer-bottom__name col-sm-4"><span>птд.рф</span></div>
-        <div class="col-sm-4 footer-bottom__phones">
-          <div class="footer-bottom__phones footer-bottom__phone--1"><i class="icon icon-tel-f"></i> тел.:+7 (921) 575-99-45</div>
-          <div class="footer-bottom__phones footer-bottom__phone--2">+7 (921) 320-94-93</div>
-        </div>
+        <div class="footer-bottom__name col-sm-4 col-xs-12"><span>пТд</span></div>
+        <div class="col-sm-4 col-xs-12 footer-bottom__phones"><i class="icon icon-tel-f"></i>тел.: +7 <span class="red-empasis">(812)</span> 575-99-45</div>
       </div>
     </div>
   </div>
+
+
+
+
 </footer>

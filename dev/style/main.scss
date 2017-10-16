@@ -6,35 +6,68 @@
   transition: all 0.5s ease-in-out;
   img {
     max-width: 100%;
+    position: relative;
+    z-index: -1;
   }
-  &:hover {
-    box-shadow: 0 0 20px;
-  }
+}
+
+.cat-link-image a {
+  display: block;
+  line-height: 1;
+  transition: all 0.5s ease-in-out;
+
+&:hover {
+  box-shadow: 0 0 35px 0 #000 inset;
+}
 
 }
 
 .main-content__banner {
   height: 1262px;
-  padding-top: 200px;
-  background: #fff url(../images/zalog-main2.jpg) center center no-repeat;
+  padding-top: 50px;
+  background: #fff url(../images/zalog-main3.jpg) center center no-repeat;
+
+  @include phones() {
+    padding-top: 20px;
+  }
+
+}
+
+.icon-main-title {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 15px;
+}
+
+
+.main-content__subtitle {
+  margin-bottom: 45px;
+  color: #000000;
+  font-family:'Conv_CYRIL',Sans-Serif;
+  font-size: 2em;
+  text-align: center;
+
+  @include phones {
+    font-size: 1.5em;
+  }
 }
 
 .plant-link-image {
   height: 208px;
   margin: 0 -15px;
-  transition: 1s ease-in-out;
+  transition: 0.5s ease-in-out;
+}
 
-  &:hover {
-        filter: brightness(40%)
-  }
+.plant-link-image--active {
+    filter: brightness(40%)
 }
 
 .plant-link-image--left {
-  background: #fff url(../images/svir-main.jpg) center center no-repeat;
+  background: #f7edd4 url(../images/svir-main.jpg) center center no-repeat;
 }
 
 .plant-link-image--right {
-  background: #fff url(../images/veresk-main.jpg) center center no-repeat;
+  background: #f7edd4 url(../images/veresk-main.jpg) center center no-repeat;
 }
 
 .main-content__title {

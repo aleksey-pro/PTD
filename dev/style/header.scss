@@ -2,9 +2,15 @@
 
 
 .header-banner {
-  background: #fff url(../images/banner-header.jpg) right center no-repeat;
+  background: #fff url(../images/banner-header.jpg) no-repeat;
+  background-position: right center;
   height: 357px;
   position: relative;
+
+  @include xs-tablets {
+    background-position: left center;
+  }
+
 }
 
 .top-header {
@@ -15,10 +21,30 @@
   &__logo {
     text-align: center;
     margin-top: 10px;
+    display: block;
   }
 
   &__phones {
     text-align: right;
+  }
+
+
+  @include md-desktops {
+    font-size: 1.1em;
+  }
+
+
+  @include phones() {
+    margin-top: 10px;
+    padding-left: 5px;
+    font-size: 1em;
+  }
+
+}
+
+.top-header__phones {
+  @include xs-tablets() {
+    text-align: center;
   }
 }
 
@@ -31,8 +57,23 @@
   font-size: 2.57em;
   text-align: center;
   margin-top: 24px;
-  margin-bottom: 69px;
   text-transform: uppercase;
+
+  @include xs-tablets {
+    margin-top: 0;
+    font-size: 2em;
+    margin-right: -30px;
+    margin-left: -30px;
+    background-color: rgba(248, 248, 248, 0.5);
+  }
+
+  @include phones {
+    margin-bottom: 0;
+  }
+}
+
+.icon-tel-h {
+  margin-bottom: 5px;
 }
 
 
@@ -49,8 +90,24 @@
   background-color: rgba(#f8f8f8, 0.5);
   line-height: 82px;
   border-radius: unset;
+  box-shadow: 0 3px 20px rgba(0, 0, 0, 0.5);
 
-  @include down-shadow();
+  li a {
+    color: #000000 !important;
+  }
+
+
+  @include xs-tablets {
+    min-height: 1px;
+    line-height: 1;
+  }
+
+
+  @include phones {
+   min-height: 52px;
+   line-height: 52px;
+  }
+
 }
 
 
@@ -58,38 +115,125 @@
   float: none;
   text-align: center;
   text-transform: uppercase;
+  position: relative;
 }
 
 .navbar-header li {
   float: none;
   display: inline-block;
-  border-left: 1px solid #000000;
+  width: 200px;
 
-  &:last-child {
-    border-right: 1px solid #000000;
+  @media all and (max-width: 1250px) {
+    width: 180px;
+  }
+
+
+  @include md-desktops {
+    width: 145px;
+
+  }
+
+  @include xs-tablets {
+    width: 100%;
+  }
+
+  @include phones {
+    border-bottom: 1px solid black;
+
+    &.active {
+      background: unset !important;
+    }
+  }
+
+
+
+
+  &.active {
+     /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&0.3+0,0+5,0+95,0.3+100 */
+    background: -moz-linear-gradient(left,  rgba(0,0,0,0.3) 0%, rgba(0,0,0,0) 5%, rgba(0,0,0,0) 95%, rgba(0,0,0,0.3) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left,  rgba(0,0,0,0.3) 0%,rgba(0,0,0,0) 5%,rgba(0,0,0,0) 95%,rgba(0,0,0,0.3) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right,  rgba(0,0,0,0.3) 0%,rgba(0,0,0,0) 5%,rgba(0,0,0,0) 95%,rgba(0,0,0,0.3) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4d000000', endColorstr='#4d000000',GradientType=1 ); /* IE6-9 */
+  }
+
+}
+
+.collapse-custom {
+  margin-right: -15px !important;
+  margin-left: -15px !important;
+
+  @include xs-tablets {
+    background-color: #fff;
+  }
+
+}
+
+.navbar-header > li:after  {
+  content: '';
+  display: block;
+  background-image: url(../images/sprite.png);
+  background-position: -230px -176px;
+  width: 1px;
+  height: 81px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+
+  @include phones {
+    display: none;
   }
 }
 
+.navbar-header > li:first-child:before {
+  content: '';
+  display: block;
+  background-image: url(../images/sprite.png);
+  background-position: -230px -176px;
+  width: 1px;
+  height: 81px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+
+  @include phones {
+    display: none;
+  }
+}
+
+
 .navbar-header > li > a {
-  padding: 10px 56px;
-  color: #000000;
-  font-size: 1.4em;
+  padding: 0;
+  color: inherit;
+  font-size: 1em;
   font-family: 'PT Serif Caption', serif;
   display: inline-block;
+  background: none !important;
 
   &:hover {
-    color: #ff0025;
+    color: #464145 !important;
     background-color: transparent;
+
   }
   &:focus {
     background-color: transparent;
   }
-  &:active {
-    color: #ff0025;
+
+  &.active {
+    color: #ff0025!important;
     background-color: transparent;
   }
 
-  @media all and (max-width: 1200px) {
-    padding: 10px 26px;
+  @include md-desktops {
+    font-size: 0.8em;
   }
 }
+
+.menu-spoiler {
+  float: right;
+  margin-right: 10px;
+
+  @media (min-width: 768px) {
+    display: none;
+  }
+}
+

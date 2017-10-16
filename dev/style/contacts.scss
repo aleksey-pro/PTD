@@ -52,7 +52,7 @@
   }
 
   input[type="submit"] {
-    margin: 20px 0;
+    margin: 8px 0;
     background-color: #8b8b8b;
     color: #fff;
     width: 165px;
@@ -67,8 +67,67 @@
 
 .order-postbox {
   text-align: right;
+  overflow: hidden;
 }
 
 .icon-postbox {
   margin-top: 95px;
+}
+
+
+//modal
+
+.modal {
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  right: auto;
+}
+
+.modal-content {
+  color: #000;
+  text-align: center;
+  padding-bottom: 20px;
+  background-size: cover;
+  background: #fff url(../images/modal-bg.jpg) 0 0 no-repeat;
+
+  @include xs-tablets {
+    background-image: none;
+  }
+}
+
+.custom-mod-title {
+  font-size: 1.68em;
+  margin-top: 25px;
+  text-transform: uppercase;
+}
+
+
+.modal-logo {
+  height: 95px;
+  width: 140px;
+  margin: 0 auto 35px;
+}
+
+.modal-subtitle {
+  font-size: 1.15em;
+}
+
+.modal-text {
+  font-family:'Conv_CYRIL',Sans-Serif;
+  margin-bottom: 15px;
+  margin-top: 110px;
+}
+
+.modal-dialog {
+  position: relative;
+}
+
+.custom-close {
+  position: absolute;
+  top: -30px;
+  right: 10px;
+  opacity: 1;
+  color: #fff;
+  text-shadow: none;
 }

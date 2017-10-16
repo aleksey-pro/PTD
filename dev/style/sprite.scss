@@ -18,43 +18,61 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 */
 .icon-arr-up {
   background-image: url(../images/sprite.png);
-  background-position: -230px 0px;
+  background-position: -230px -59px;
   width: 65px;
   height: 53px;
 }
 .icon-catalog-black {
   background-image: url(../images/sprite.png);
-  background-position: -262px -53px;
+  background-position: -230px -112px;
   width: 32px;
   height: 32px;
 }
+.icon-footer {
+  background-image: url(../images/sprite.png);
+  background-position: -231px -164px;
+  width: 1px;
+  height: 70px;
+}
 .icon-mail-f {
   background-image: url(../images/sprite.png);
-  background-position: -252px -138px;
+  background-position: -341px -91px;
   width: 22px;
   height: 18px;
 }
 .icon-mail-h {
   background-image: url(../images/sprite.png);
-  background-position: -230px -138px;
+  background-position: -290px -112px;
   width: 22px;
   height: 18px;
 }
+.icon-main-title {
+  background-image: url(../images/sprite.png);
+  background-position: -230px 0px;
+  width: 137px;
+  height: 59px;
+}
 .icon-map-f {
   background-image: url(../images/sprite.png);
-  background-position: -254px -117px;
+  background-position: -319px -91px;
   width: 22px;
   height: 20px;
 }
 .icon-map-h {
   background-image: url(../images/sprite.png);
-  background-position: -230px -117px;
+  background-position: -295px -91px;
   width: 24px;
   height: 21px;
 }
+.icon-menu {
+  background-image: url(../images/sprite.png);
+  background-position: -230px -164px;
+  width: 1px;
+  height: 81px;
+}
 .icon-pdf {
   background-image: url(../images/sprite.png);
-  background-position: -262px -85px;
+  background-position: -262px -112px;
   width: 28px;
   height: 32px;
 }
@@ -66,37 +84,37 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 }
 .icon-price-black {
   background-image: url(../images/sprite.png);
-  background-position: -230px -53px;
+  background-position: -327px -59px;
   width: 32px;
   height: 32px;
 }
 .icon-price-white {
   background-image: url(../images/sprite.png);
-  background-position: -230px -85px;
+  background-position: -295px -59px;
   width: 32px;
   height: 32px;
 }
 .icon-sm-arr-down {
   background-image: url(../images/sprite.png);
-  background-position: -242px -156px;
+  background-position: -312px -112px;
   width: 15px;
   height: 8px;
 }
 .icon-sm-arr-left {
   background-image: url(../images/sprite.png);
-  background-position: -274px -138px;
+  background-position: -359px -59px;
   width: 8px;
   height: 16px;
 }
 .icon-tel-f {
   background-image: url(../images/sprite.png);
-  background-position: -276px -117px;
+  background-position: -242px -144px;
   width: 12px;
   height: 20px;
 }
 .icon-tel-h {
   background-image: url(../images/sprite.png);
-  background-position: -230px -156px;
+  background-position: -230px -144px;
   width: 12px;
   height: 20px;
 }

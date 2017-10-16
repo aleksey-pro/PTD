@@ -7893,49 +7893,70 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 */
 .icon-arr-up {
   background-image: url(../images/sprite.png);
-  background-position: -230px 0px;
+  background-position: -230px -59px;
   width: 65px;
   height: 53px;
 }
 
 .icon-catalog-black {
   background-image: url(../images/sprite.png);
-  background-position: -262px -53px;
+  background-position: -230px -112px;
   width: 32px;
   height: 32px;
 }
 
+.icon-footer {
+  background-image: url(../images/sprite.png);
+  background-position: -231px -164px;
+  width: 1px;
+  height: 70px;
+}
+
 .icon-mail-f {
   background-image: url(../images/sprite.png);
-  background-position: -252px -138px;
+  background-position: -341px -91px;
   width: 22px;
   height: 18px;
 }
 
 .icon-mail-h {
   background-image: url(../images/sprite.png);
-  background-position: -230px -138px;
+  background-position: -290px -112px;
   width: 22px;
   height: 18px;
 }
 
+.icon-main-title {
+  background-image: url(../images/sprite.png);
+  background-position: -230px 0px;
+  width: 137px;
+  height: 59px;
+}
+
 .icon-map-f {
   background-image: url(../images/sprite.png);
-  background-position: -254px -117px;
+  background-position: -319px -91px;
   width: 22px;
   height: 20px;
 }
 
 .icon-map-h {
   background-image: url(../images/sprite.png);
-  background-position: -230px -117px;
+  background-position: -295px -91px;
   width: 24px;
   height: 21px;
 }
 
+.icon-menu {
+  background-image: url(../images/sprite.png);
+  background-position: -230px -164px;
+  width: 1px;
+  height: 81px;
+}
+
 .icon-pdf {
   background-image: url(../images/sprite.png);
-  background-position: -262px -85px;
+  background-position: -262px -112px;
   width: 28px;
   height: 32px;
 }
@@ -7949,42 +7970,42 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 
 .icon-price-black {
   background-image: url(../images/sprite.png);
-  background-position: -230px -53px;
+  background-position: -327px -59px;
   width: 32px;
   height: 32px;
 }
 
 .icon-price-white {
   background-image: url(../images/sprite.png);
-  background-position: -230px -85px;
+  background-position: -295px -59px;
   width: 32px;
   height: 32px;
 }
 
 .icon-sm-arr-down {
   background-image: url(../images/sprite.png);
-  background-position: -242px -156px;
+  background-position: -312px -112px;
   width: 15px;
   height: 8px;
 }
 
 .icon-sm-arr-left {
   background-image: url(../images/sprite.png);
-  background-position: -274px -138px;
+  background-position: -359px -59px;
   width: 8px;
   height: 16px;
 }
 
 .icon-tel-f {
   background-image: url(../images/sprite.png);
-  background-position: -276px -117px;
+  background-position: -242px -144px;
   width: 12px;
   height: 20px;
 }
 
 .icon-tel-h {
   background-image: url(../images/sprite.png);
-  background-position: -230px -156px;
+  background-position: -230px -144px;
   width: 12px;
   height: 20px;
 }
@@ -8047,10 +8068,21 @@ body {
   vertical-align: middle;
 }
 
+.red-empasis {
+  color: #ff0000;
+}
+
 .header-banner {
-  background: #fff url(../images/banner-header.jpg) right center no-repeat;
+  background: #fff url(../images/banner-header.jpg) no-repeat;
+  background-position: right center;
   height: 357px;
   position: relative;
+}
+
+@media screen and (max-width: 768px) {
+  .header-banner {
+    background-position: left center;
+  }
 }
 
 .top-header {
@@ -8062,10 +8094,31 @@ body {
 .top-header__logo {
   text-align: center;
   margin-top: 10px;
+  display: block;
 }
 
 .top-header__phones {
   text-align: right;
+}
+
+@media screen and (max-width: 992px) {
+  .top-header {
+    font-size: 1.1em;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .top-header {
+    margin-top: 10px;
+    padding-left: 5px;
+    font-size: 1em;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .top-header__phones {
+    text-align: center;
+  }
 }
 
 .top-header__logo img {
@@ -8077,8 +8130,27 @@ body {
   font-size: 2.57em;
   text-align: center;
   margin-top: 24px;
-  margin-bottom: 69px;
   text-transform: uppercase;
+}
+
+@media screen and (max-width: 768px) {
+  .header-title {
+    margin-top: 0;
+    font-size: 2em;
+    margin-right: -30px;
+    margin-left: -30px;
+    background-color: rgba(248, 248, 248, 0.5);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .header-title {
+    margin-bottom: 0;
+  }
+}
+
+.icon-tel-h {
+  margin-bottom: 5px;
 }
 
 .navbar-custom {
@@ -8095,32 +8167,132 @@ body {
   box-shadow: 0 3px 20px rgba(0, 0, 0, 0.5);
 }
 
+.navbar-custom li a {
+  color: #000000 !important;
+}
+
+@media screen and (max-width: 768px) {
+  .navbar-custom {
+    min-height: 1px;
+    line-height: 1;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .navbar-custom {
+    min-height: 52px;
+    line-height: 52px;
+  }
+}
+
 .navbar-header {
   float: none;
   text-align: center;
   text-transform: uppercase;
+  position: relative;
 }
 
 .navbar-header li {
   float: none;
   display: inline-block;
-  border-left: 1px solid #000000;
+  width: 200px;
 }
 
-.navbar-header li:last-child {
-  border-right: 1px solid #000000;
+@media all and (max-width: 1250px) {
+  .navbar-header li {
+    width: 180px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .navbar-header li {
+    width: 145px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .navbar-header li {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .navbar-header li {
+    border-bottom: 1px solid black;
+  }
+  .navbar-header li.active {
+    background: unset !important;
+  }
+}
+
+.navbar-header li.active {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&0.3+0,0+5,0+95,0.3+100 */
+  /* FF3.6-15 */
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.3) 0%, transparent 5%, transparent 95%, rgba(0, 0, 0, 0.3) 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4d000000', endColorstr='#4d000000',GradientType=1 );
+  /* IE6-9 */
+}
+
+.collapse-custom {
+  margin-right: -15px !important;
+  margin-left: -15px !important;
+}
+
+@media screen and (max-width: 768px) {
+  .collapse-custom {
+    background-color: #fff;
+  }
+}
+
+.navbar-header > li:after {
+  content: '';
+  display: block;
+  background-image: url(../images/sprite.png);
+  background-position: -230px -176px;
+  width: 1px;
+  height: 81px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+@media screen and (max-width: 480px) {
+  .navbar-header > li:after {
+    display: none;
+  }
+}
+
+.navbar-header > li:first-child:before {
+  content: '';
+  display: block;
+  background-image: url(../images/sprite.png);
+  background-position: -230px -176px;
+  width: 1px;
+  height: 81px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+@media screen and (max-width: 480px) {
+  .navbar-header > li:first-child:before {
+    display: none;
+  }
 }
 
 .navbar-header > li > a {
-  padding: 10px 56px;
-  color: #000000;
-  font-size: 1.4em;
+  padding: 0;
+  color: inherit;
+  font-size: 1em;
   font-family: 'PT Serif Caption', serif;
   display: inline-block;
+  background: none !important;
 }
 
 .navbar-header > li > a:hover {
-  color: #ff0025;
+  color: #464145 !important;
   background-color: transparent;
 }
 
@@ -8128,14 +8300,25 @@ body {
   background-color: transparent;
 }
 
-.navbar-header > li > a:active {
-  color: #ff0025;
+.navbar-header > li > a.active {
+  color: #ff0025 !important;
   background-color: transparent;
 }
 
-@media all and (max-width: 1200px) {
+@media screen and (max-width: 992px) {
   .navbar-header > li > a {
-    padding: 10px 26px;
+    font-size: 0.8em;
+  }
+}
+
+.menu-spoiler {
+  float: right;
+  margin-right: 10px;
+}
+
+@media (min-width: 768px) {
+  .menu-spoiler {
+    display: none;
   }
 }
 
@@ -8147,35 +8330,69 @@ body {
 
 .cat-link-image img {
   max-width: 100%;
+  position: relative;
+  z-index: -1;
 }
 
-.cat-link-image:hover {
-  box-shadow: 0 0 20px;
+.cat-link-image a {
+  display: block;
+  line-height: 1;
+  transition: all 0.5s ease-in-out;
+}
+
+.cat-link-image a:hover {
+  box-shadow: 0 0 35px 0 #000 inset;
 }
 
 .main-content__banner {
   height: 1262px;
-  padding-top: 200px;
-  background: #fff url(../images/zalog-main2.jpg) center center no-repeat;
+  padding-top: 50px;
+  background: #fff url(../images/zalog-main3.jpg) center center no-repeat;
+}
+
+@media screen and (max-width: 480px) {
+  .main-content__banner {
+    padding-top: 20px;
+  }
+}
+
+.icon-main-title {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 15px;
+}
+
+.main-content__subtitle {
+  margin-bottom: 45px;
+  color: #000000;
+  font-family: 'Conv_CYRIL',Sans-Serif;
+  font-size: 2em;
+  text-align: center;
+}
+
+@media screen and (max-width: 480px) {
+  .main-content__subtitle {
+    font-size: 1.5em;
+  }
 }
 
 .plant-link-image {
   height: 208px;
   margin: 0 -15px;
-  transition: 1s ease-in-out;
+  transition: 0.5s ease-in-out;
 }
 
-.plant-link-image:hover {
+.plant-link-image--active {
   -webkit-filter: brightness(40%);
           filter: brightness(40%);
 }
 
 .plant-link-image--left {
-  background: #fff url(../images/svir-main.jpg) center center no-repeat;
+  background: #f7edd4 url(../images/svir-main.jpg) center center no-repeat;
 }
 
 .plant-link-image--right {
-  background: #fff url(../images/veresk-main.jpg) center center no-repeat;
+  background: #f7edd4 url(../images/veresk-main.jpg) center center no-repeat;
 }
 
 .main-content__title {
@@ -8185,6 +8402,12 @@ body {
 
 .price__head {
   line-height: 70px;
+}
+
+@media screen and (max-width: 480px) {
+  .price__head {
+    line-height: 40px;
+  }
 }
 
 .price__title {
@@ -8259,16 +8482,26 @@ body {
   display: none;
 }
 
-.trigger-head {
-  border: 1px solid #000000;
+.accordeon__trigger {
+  border: 1px solid #7b7b7b;
   position: relative;
+  display: block;
+  transition: all 0.5s ease-in-out;
 }
 
-.trigger-head:after {
+.accordeon__trigger:hover {
+  background-color: #e0e0e0;
+}
+
+.accordeon__trigger:focus {
+  color: red;
+}
+
+.accordeon__trigger:after {
   content: "";
   display: block;
   background-image: url(../images/sprite.png);
-  background-position: -274px -138px;
+  background-position: -359px -59px;
   width: 8px;
   height: 16px;
   position: absolute;
@@ -8277,27 +8510,52 @@ body {
   margin-top: -8px;
 }
 
+@media screen and (max-width: 480px) {
+  .accordeon__trigger:after {
+    right: 15px;
+  }
+}
+
 .trigger-head__button {
-  margin-left: 40px;
   border-left: 1px solid #000;
+}
+
+@media screen and (max-width: 480px) {
+  .trigger-head__button {
+    margin-left: 10px;
+  }
 }
 
 .trigger-head__button a {
   color: inherit;
   text-decoration: none;
-  text-align: center;
-  margin-left: 40px;
+  display: block;
+  position: relative;
+  height: 60px;
+  width: 80px;
+  font-size: 0.6em;
 }
 
-.icon-price-black:after {
-  content: "каталог";
-  font-size: 0.5em;
-  margin-left: -2px;
+@media screen and (max-width: 480px) {
+  .trigger-head__button a {
+    margin-left: 10px;
+  }
+}
+
+.icon-price-black {
+  font-size: 0.6em;
+  padding-top: 5px;
+}
+
+@media screen and (max-width: 480px) {
+  .icon-price-black {
+    margin-right: 10px;
+  }
 }
 
 .arrow-active:after {
-  background-image: url(../images/sprite.png) !important;
-  background-position: -242px -156px;
+  background-image: url(../images/sprite.png);
+  background-position: -312px -112px;
   width: 15px;
   height: 8px;
 }
@@ -8327,6 +8585,11 @@ body {
   bottom: 0;
 }
 
+.trigger-head__button:hover {
+  color: red;
+  text-decoration: underline;
+}
+
 .accordeon-header {
   line-height: 60px;
   text-align: center;
@@ -8343,6 +8606,14 @@ body {
   /* IE6-9 */
 }
 
+@media screen and (max-width: 480px) {
+  .accordeon-header {
+    font-size: 1.1em;
+    text-align: left;
+    padding-left: 1em;
+  }
+}
+
 .accordeon-header.active {
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#860000+0,ff0000+50,860000+100 */
   background: #860000;
@@ -8356,12 +8627,24 @@ body {
 }
 
 .table {
-  background-color: rgba(255, 79, 0, 0.4);
+  background-color: #dadada;
 }
 
 .table thead > tr > td {
   vertical-align: middle;
   padding: 5px 10px;
+}
+
+.column2, .column7, .column10, .column13, .style9 {
+  font-weight: bold;
+}
+
+thead {
+  background-color: #a6a6a6;
+}
+
+td, th {
+  border: 1px solid #6b6b6b !important;
 }
 
 .catalog .breadcrumb {
@@ -8382,10 +8665,22 @@ body {
   font-size: 1.28em;
 }
 
+@media screen and (max-width: 992px) {
+  .cat-text {
+    font-size: 1em;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .cat-text {
+    margin: 0;
+  }
+}
+
 .cat-btn {
+  display: block;
   border: 1px solid #000;
-  text-align: center;
-  width: 100%;
+  text-align: left;
   margin-bottom: 20px;
   color: #000;
   text-transform: uppercase;
@@ -8397,9 +8692,27 @@ body {
   background-color: #bfbfbf;
 }
 
+@media screen and (max-width: 768px) {
+  .cat-btn {
+    padding: 6px 12px;
+    margin-bottom: 10px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .cat-btn {
+    padding: 6px;
+    font-size: 0.6em;
+  }
+}
+
 .price-link-image {
   margin-bottom: 18px;
-  transition: all 0.5s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.price-link-image a {
+  display: block;
 }
 
 .price-link-image--left {
@@ -8410,12 +8723,19 @@ body {
   margin-left: -15px;
 }
 
+.price-link-image img {
+  position: relative;
+  z-index: -1;
+}
+
 .price-link-image:hover {
   box-shadow: 0 0 20px;
 }
 
-.icon-price-black {
-  margin-right: 40px;
+@media screen and (max-width: 768px) {
+  .price-link-image {
+    margin: 0;
+  }
 }
 
 .special__banner {
@@ -8427,20 +8747,39 @@ body {
   position: relative;
 }
 
+@media screen and (max-width: 480px) {
+  .special__banner {
+    margin-bottom: 150px;
+  }
+}
+
 .special__title {
   font-family: 'Conv_CYRIL',Sans-Serif;
   font-size: 2.14em;
   position: absolute;
   top: 0;
-  left: 15x;
+  left: 15px;
   z-index: 100;
 }
 
+@media screen and (max-width: 480px) {
+  .special__title {
+    font-size: 1em;
+  }
+}
+
 .special__buttons {
-  width: 420px;
   position: absolute;
   bottom: 0;
   right: 15px;
+}
+
+@media screen and (max-width: 480px) {
+  .special__buttons {
+    left: 15px;
+    top: 100%;
+    right: auto;
+  }
 }
 
 .special__buttons .icon-price-black {
@@ -8494,7 +8833,7 @@ body {
 }
 
 .order-form input[type="submit"] {
-  margin: 20px 0;
+  margin: 8px 0;
   background-color: #8b8b8b;
   color: #fff;
   width: 165px;
@@ -8507,31 +8846,111 @@ body {
 
 .order-postbox {
   text-align: right;
+  overflow: hidden;
 }
 
 .icon-postbox {
   margin-top: 95px;
 }
 
+.modal {
+  left: 50%;
+  top: 50%;
+  -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+  right: auto;
+}
+
+.modal-content {
+  color: #000;
+  text-align: center;
+  padding-bottom: 20px;
+  background-size: cover;
+  background: #fff url(../images/modal-bg.jpg) 0 0 no-repeat;
+}
+
+@media screen and (max-width: 768px) {
+  .modal-content {
+    background-image: none;
+  }
+}
+
+.custom-mod-title {
+  font-size: 1.68em;
+  margin-top: 25px;
+  text-transform: uppercase;
+}
+
+.modal-logo {
+  height: 95px;
+  width: 140px;
+  margin: 0 auto 35px;
+}
+
+.modal-subtitle {
+  font-size: 1.15em;
+}
+
+.modal-text {
+  font-family: 'Conv_CYRIL',Sans-Serif;
+  margin-bottom: 15px;
+  margin-top: 110px;
+}
+
+.modal-dialog {
+  position: relative;
+}
+
+.custom-close {
+  position: absolute;
+  top: -30px;
+  right: 10px;
+  opacity: 1;
+  color: #fff;
+  text-shadow: none;
+}
+
 .footer {
-  height: 195px;
   background-color: #2d2d2d;
   color: #ffffff;
+  font-family: 'PT Serif Caption', serif;
+}
+
+.footer-container {
+  margin-bottom: 20px;
 }
 
 .footer-menu {
-  box-shadow: 0 3px 20px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 3px 20px black;
 }
 
 .navbar-footer {
   line-height: 70px;
   text-transform: uppercase;
+  position: relative;
+  margin: 0 -15px 0 -15px;
+}
+
+.navbar-footer li {
+  width: 200px;
+}
+
+@media all and (max-width: 1250px) {
+  .navbar-footer li {
+    width: 180px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .navbar-footer li {
+    width: 145px;
+  }
 }
 
 .navbar-footer li a {
   padding: 0;
   color: #ffffff;
-  font-size: 1.09em;
+  font-size: 1em;
 }
 
 .navbar-footer li a:hover {
@@ -8544,19 +8963,63 @@ body {
   background-color: transparent;
 }
 
-.navbar-footer > li:hover {
-  color: #ffffff;
+.navbar-footer li a.active {
+  color: #ff0025 !important;
   background-color: transparent;
 }
 
-.navbar-footer > li:focus {
-  background-color: transparent;
-  border: none;
+@media screen and (max-width: 992px) {
+  .navbar-footer li a {
+    font-size: 0.8em;
+  }
 }
 
-.navbar-footer > li:active {
-  color: #ff0025;
+.navbar-footer li.active {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,ffffff+100&0.3+0,0+5,0+95,0.3+100 */
+  /* FF3.6-15 */
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 5%, rgba(255, 255, 255, 0) 95%, rgba(255, 255, 255, 0.3) 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4dffffff', endColorstr='#4dffffff',GradientType=1 );
+  /* IE6-9 */
+}
+
+.navbar-footer li.active a:focus {
   background-color: transparent;
+}
+
+.navbar-footer li.active a:hover {
+  background-color: transparent;
+}
+
+@media screen and (max-width: 768px) {
+  .navbar-footer {
+    line-height: 40px;
+  }
+}
+
+.navbar-footer li:after {
+  content: '';
+  display: block;
+  background-image: url(../images/sprite.png);
+  background-position: -231px -176px;
+  width: 1px;
+  height: 70px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+.navbar-footer li:first-child:before {
+  content: '';
+  display: block;
+  background-image: url(../images/sprite.png);
+  background-position: -231px -176px;
+  width: 1px;
+  height: 70px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
 }
 
 .footer-bottom {
@@ -8566,10 +9029,22 @@ body {
 .footer-bottom__name {
   text-align: center;
   line-height: 40px;
+  font-family: 'Conv_CYRIL';
+  font-size: 1.71em;
 }
 
 .footer-bottom__phones {
   text-align: right;
+}
+
+@media screen and (max-width: 768px) {
+  .footer-bottom__contacts {
+    text-align: center;
+    margin-top: 10px;
+  }
+  .footer-bottom__phones {
+    text-align: center;
+  }
 }
 
 .arrow-up {
@@ -8589,14 +9064,14 @@ body {
   opacity: 1;
 }
 
-@media all and (max-width: 1200px) {
+.arrow-up .icon {
+  display: block;
+}
+
+@media screen and (max-width: 992px) {
   .arrow-up {
     right: 0;
   }
-}
-
-.arrow-up .icon {
-  display: block;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -109,7 +109,7 @@ gulp.task('HTML', function() {
   return gulp.src('dev/templates/*.html')
   .pipe(fileinclude())
   .on('error', console.log)
-  .pipe(htmlmin({collapseWhitespace: true, removeComments: true}))
+  // .pipe(htmlmin({collapseWhitespace: true, removeComments: true}))
   .pipe(gulp.dest('prod'))
   .pipe(browserSync.reload({stream: true}))
 });

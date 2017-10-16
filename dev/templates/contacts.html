@@ -30,18 +30,35 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-sm-9 contacts-order">
+        <div class="col-sm-9 col-xs-12 contacts-order">
           <div class="order-title">ОСТАВИТЬ ЗАЯВКУ</div>
           <form class="order-form" id="form" method="post" action="">
-            <input type="text" name="name" placeholder="Имя">
-            <input type="phone" name="phone" placeholder="Телефон">
+            <input type="text" name="name" placeholder="Имя" required>
+            <input type="phone" name="phone" placeholder="Телефон" required>
             <input type="email" name="email" placeholder="E-mail">
             <textarea name="mess" rows="2" placeholder="Текст"></textarea>
-            <span class="info"></span><input type="submit" value="Отправить">
+            <!-- <span class="info"></span> --><input type="submit" value="Отправить">
+            <!-- <div class="alert alert-success hidden" role="alert" id="successMessage">Ваше сообщение успешно отправлено</div> -->
           </form>
         </div>
-        <div class="col-sm-3 order-postbox">
+        <div class="col-sm-3 hidden-xs order-postbox">
           <div class="icon icon-postbox"></div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <button type="button" class="close custom-close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <div class="modal-title custom-mod-title" id="myModalLabel">Спасибо!</div>
+            <div class="modal-subtitle">Ваша заявка принята!</div>
+          <div class="modal-body">
+<!--             <div class="modal-logo">
+              <img src="images/logo.png" alt="птд">
+            </div> -->
+            <div class="modal-text">Наш специалист свяжется с Вами в ближайшее время!</div>
+          </div>
         </div>
       </div>
     </div>

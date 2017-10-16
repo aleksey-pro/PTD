@@ -5,6 +5,10 @@
     position: relative;
   }
 
+  @include phones {
+    margin-bottom: 150px;
+  }
+
 }
 
 .special__title {
@@ -12,15 +16,24 @@
   font-size: 2.14em;
   position: absolute;
   top: 0;
-  left: 15x;
+  left: 15px;
   z-index: 100;
+
+  @include phones {
+    font-size: 1em;
+  }
 }
 
 .special__buttons {
-  width: 420px;
   position: absolute;
   bottom: 0;
   right: 15px;
+
+  @include phones {
+    left: 15px;
+    top: 100%;
+    right: auto;
+  }
 
   .icon-price-black{
     margin-right: 5px;
