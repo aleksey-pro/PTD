@@ -1,0 +1,94 @@
+//products
+
+#product-content {
+  margin-top: 30px;
+}
+
+.attribute-title {
+  font-weight: bold;
+}
+
+.thumbnail {
+    border: 1px solid #a2a2a2;
+    border-radius: 0;
+    &:hover, &:focus, &.active {
+      border: 1px solid #403f3f !important;
+    }
+}
+
+.thumbnails {
+  margin-left: -15px;
+}
+
+.thumbnails .image-additional {
+    float: left;
+    margin-left: 20px;
+}
+
+.thumbnails>li {
+    margin-left: 20px;
+}
+
+.image-additional {
+    max-width: 78px;
+}
+
+.tab-content-custom {
+    padding: 10px;
+}
+
+.tab-pane-custom {
+  color: #5c5c5c;
+}
+
+.nav-tabs > li.active > a {
+  border: 1px solid #ddd;
+}
+
+.tab-pane {
+  border: 1px solid #ddd;
+  p {
+    font-size: 0.95em;
+    color: #8a8a8a;
+  }
+}
+
+.tab-content {
+  margin-bottom: 20px;
+}
+
+.product-title {
+  margin-top: -3px;
+  line-height: 1;
+}
+
+.list-unstyled {
+  margin-bottom: 355px;
+
+  @include xs-tablets {
+    margin-bottom: 20px;
+  }
+}
+
+.product-cat-btn {
+  display: block;
+  border: 1px solid #000;
+  text-align: left;
+  margin-bottom: 20px;
+  color: #000;
+  text-transform: uppercase;
+  padding: 6px 25px;
+  transition: all 0.2s ease-in-out;
+  width: 365px;
+  font-size: 0.8em;
+
+  &:hover{
+    background-color: #bfbfbf;
+  }
+
+  @include phones {
+    font-size: 0.5em;
+    width: 230px;
+    padding: 6px 5px;
+  }
+}

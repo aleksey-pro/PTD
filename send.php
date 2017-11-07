@@ -18,8 +18,8 @@ $mail->setFrom('postmaster@ptd.spb.ru'); //  Ваш Email
 $mail->addAddress('ptd@fgr.ru'); // Email получателя
 
 
-$Mailer->SMTPDebug = 3;
-$Mailer->SMTPDebug = 4;
+// $Mailer->SMTPDebug = 3;
+// $Mailer->SMTPDebug = 4;
 
 // Письмо
 $mail->isHTML(true);

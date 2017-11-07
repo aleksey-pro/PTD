@@ -1,19 +1,34 @@
 .catalog {
-  .breadcrumb {
-    margin-bottom: 18px;
-  }
+  margin-left: 0;
+  margin-right: 0;
+}
+
+
+.cat-content {
+  padding-right: 30px;
+  padding-left: 30px;
 }
 
 .cat-text-wrapper {
   height: 212px;
-  padding-top: 25px;
-  padding-bottom: 25px;
+  padding: 60px 10px 50px 30px;
   margin-bottom: 20px;
   background: #fff url(../images/cat-beresta.jpg) center center no-repeat;
+  background-size: contain;
+
+  @include xs-tablets {
+    background-size: cover;
+    padding-top: 45px;
+  }
+
+  @include phones {
+    padding-top: 25px;
+  }
+
 }
 
 .cat-text {
-  margin: 25px 0;
+  margin-bottom: 15px;
   font-family:'Conv_CYRIL',Sans-Serif;
   font-size: 1.28em;
 
@@ -37,7 +52,7 @@
   color: #000;
   text-transform: uppercase;
   padding: 6px 25px;
-  transition: all 0.5s ease-in-out;
+  transition: all 0.2s ease-in-out;
 
   &:hover {
     background-color: #bfbfbf;
@@ -59,17 +74,11 @@
 .price-link-image {
   margin-bottom: 18px;
   transition: all 0.2s ease-in-out;
+  padding: 0;
 
   a {
     display: block;
-  }
-
-  &--left {
-    margin-right: -15px;
-  }
-
-  &--right {
-    margin-left: -15px;
+    line-height: 1;
   }
 
   img {
@@ -85,4 +94,10 @@
     margin: 0;
   }
 
+}
+
+.price-link-image img {
+  @include xs-tablets {
+    width:  100% !important;
+  }
 }

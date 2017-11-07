@@ -12,7 +12,7 @@ $(function(){
     }, 870);
   }
 
-  if(currLoc === '#bread') {
+  if(currLoc === '#hleb') {
     classToggl($('#hleb'));
 
   }else if(currLoc === '#cond') {
@@ -23,15 +23,21 @@ $(function(){
 
   function colrLikn(menu) {
     menu.each(function() {
-      var currPage = (window.location.pathname).substr(1),
+      var currPage = (window.location.href),//.substr(1)
+          currQuery = (window.location.search),
           addr = $(this).attr('href');
+
+      var result = currQuery.match( /product/ );
 
       if(currPage === addr) {
         $(this).addClass('active');
         $(this).closest('li').addClass('active');
-      } else if (currPage === "") {
+      } else if (currQuery === "") {
         menu.first().addClass('active');
         menu.first().closest('li').addClass('active');
+      }else if (result){
+        menu.eq(1).addClass('active');
+        menu.eq(1).closest('li').addClass('active');
       }
     });
   }
@@ -39,6 +45,18 @@ $(function(){
   colrLikn($('.navbar-header a'));
   colrLikn($('.navbar-footer a'));
 
+
+//red-number
+
+function emphasisTel(element, icon){
+  var exp = element.text();
+  var newexp = exp.replace(' (', ' <span class="red-empasis">(');
+  var newexp2 =  newexp.replace(') ', ')</span> ');
+  element.html(`<i class='icon ${icon}'></i>` + newexp2);
+}
+
+emphasisTel($('.top-header__phones'), 'icon-tel-h');
+emphasisTel($('.footer-bottom__phones'), 'icon-tel-f');
 
 
   //accordeon
@@ -94,7 +112,7 @@ $(function(){
     Images.removeClass('plant-link-image--active');
   });
 
-  //scroll arrow
+  //scroll adaptive arrow
 
   var arr = $('.arrow-up');
 
@@ -105,18 +123,27 @@ $(function(){
     }, 1000)
   });
 
-  $(window).scroll(function() {
-    if( $(this).scrollTop() > 400) {
-    arr.fadeIn();
-  } else
-    arr.fadeOut();
-  });
+  function hideScroll() {
+     $(window).on('scroll',function() {
+      if( $(this).scrollTop() < 400) {
+      arr.fadeOut();
+    } else
+      arr.fadeIn();
+    });
+  }
+
+  hideScroll();
+
 
   function hideArr() {
     if($(window).width() < 768) {
       arr.hide();
+      $(window).off('scroll');
+    }else {
+      hideScroll();
     }
   };
+
   hideArr();
 
   $(window).on('resize', hideArr);
@@ -126,7 +153,7 @@ $(function(){
   $('#form').on('submit', function(e){
      e.preventDefault();
      $.ajax({
-      url: '../send.php',
+      url: 'send.php',
       type: 'POST',
       data: $(this).serialize(),
       success: function(msg){
@@ -134,53 +161,15 @@ $(function(){
         $('#myModal').modal();
         $('input, textarea').not(':input[type=file], :input[type=submit]').val('');
       } else {
-          $('#myModal').modal();
-          $('input, textarea').not(':input[type=file], :input[type=submit]').val('');
+          alert('Не удалось отправить. Обратитесь к администратору');
         }
        }
      });
    });
 
-
-  // center-modals
-
-  // function centerModals(){
-  //   $('.modal').each(function(i){
-  //     var $clone = $(this).clone().css('display', 'block').appendTo('body');
-  //     var top = Math.round(($clone.height() - $clone.find('.modal-content').height()) / 2);
-  //     top = top > 0 ? top : 0;
-  //     $clone.remove();
-  //     $(this).find('.modal-content').css("margin-top", top);
-  //   });
-  // }
-
-  // $(window).on('resize', centerModals);
-
-
-
 }); //ready
 
-//ya.map
 
-function yaMaps() {
-  ymaps.ready(init);
-  var myMap,
-      myPlacemark;
-
-  function init(){
-      myMap = new ymaps.Map("map", {
-          center: [59.994234, 30.437967],
-          zoom: 12
-      });
-
-      myPlacemark = new ymaps.Placemark([59.994234, 30.437967], {
-          hintContent: 'Петербургский Торговый Дом'
-          // ,balloonContent: 'Петербургский Торговый Дом'
-      });
-
-      myMap.geoObjects.add(myPlacemark);
-  }
-}
 
 
 

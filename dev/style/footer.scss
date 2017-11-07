@@ -12,6 +12,9 @@
 
 .footer-menu {
   box-shadow: 0 3px 20px rgba(0, 0, 0, 1);
+  @include xs-tablets {
+    display: none !important;
+  }
 }
 
 .navbar-footer {
@@ -20,9 +23,11 @@
   text-transform: uppercase;
   position: relative;
   margin: 0 -15px 0 -15px;
+  font-size: 0;
 
   li {
     width: 200px;
+    line-height: 70px;
   }
 
   @media all and (max-width: 1250px) {
@@ -41,7 +46,8 @@
 .navbar-footer li a {
   padding: 0;
   color: #ffffff;
-  font-size: 1em;
+  font-size: 14px;
+
   &:hover {
     color: #afafaf;
     background-color: transparent;
@@ -85,7 +91,7 @@
   content: '';
   display: block;
   background-image: url(../images/sprite.png);
-  background-position: -231px -176px;
+  background-position: -231px -164px;
   width: 1px;
   height: 70px;
   position: absolute;
@@ -97,7 +103,7 @@
   content: '';
   display: block;
   background-image: url(../images/sprite.png);
-  background-position: -231px -176px;
+  background-position: -231px -164px;
   width: 1px;
   height: 70px;
   position: absolute;
@@ -106,7 +112,7 @@
 }
 
 .footer-bottom {
-  margin-top: 40px;
+  padding-top: 40px;
 
   &__name {
     text-align: center;
@@ -117,20 +123,16 @@
 
   &__phones {
     text-align: right;
+    @include xs-tablets {
+      text-align: center;
+    }
   }
-}
-
 
   @include xs-tablets {
-    .footer-bottom__contacts {
-      text-align: center;
-      margin-top: 10px;
-    }
-    .footer-bottom__phones {
-      text-align: center;
-    }
+    text-align: center;
+    padding-top: 20px;
   }
-
+}
 
 .arrow-up {
   text-transform: uppercase;
@@ -141,6 +143,7 @@
   text-align: center;
   z-index: 999;
   opacity: 0.7;
+  display: none;
 
   &:hover {
     text-decoration: none;

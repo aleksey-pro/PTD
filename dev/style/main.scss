@@ -1,24 +1,22 @@
 //main-page
 
-.cat-link-image {
+.main-link-image {
   padding: 0;
   margin-bottom: -2px;
-  transition: all 0.5s ease-in-out;
   img {
-    max-width: 100%;
     position: relative;
     z-index: -1;
   }
 }
 
-.cat-link-image a {
+.main-link-image a {
+  transition: all 0.5s ease-in-out;
   display: block;
   line-height: 1;
-  transition: all 0.5s ease-in-out;
 
-&:hover {
-  box-shadow: 0 0 35px 0 #000 inset;
-}
+  &:hover {
+    box-shadow: 0 0 35px 0 #000 inset;
+  }
 
 }
 
@@ -56,6 +54,7 @@
   height: 208px;
   margin: 0 -15px;
   transition: 0.5s ease-in-out;
+  background-size: cover !important;
 }
 
 .plant-link-image--active {

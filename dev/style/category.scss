@@ -1,0 +1,129 @@
+h1.cat-title {
+	text-align: center;
+	margin-bottom: 25px;
+	text-transform: uppercase;
+	font-size: 1.69em;
+}
+
+
+.products-grid {
+	margin-bottom: 20px;
+}
+
+
+.thumb-custom {
+	border: 1px solid #a2a2a2;
+	margin-bottom: 15px;
+  transition: all 0.2s ease-in-out;
+ &:hover {
+  border: 1px solid #000;
+ }
+
+}
+
+.tab-pane {
+  padding: 10px;
+}
+
+.caption-custom {
+   padding: 10px;
+   height: 120px;
+}
+
+
+.caption-custom h4 a {
+  font-size: 0.98em;
+  color: #000000;
+  &:hover {
+    text-decoration: none;
+    color: red;
+  }
+}
+
+.caption-custom p {
+	font-size: 0.95em;
+	color: #8a8a8a;
+	margin: 0;
+}
+
+.button-group-custom {
+	height: 38px;
+	position: relative;
+}
+
+
+.button-group-trigger {
+	background-color: #8b8b8b;
+	display: block;
+	color: #ffffff;
+	height: 38px;
+	line-height: 38px;
+	text-align: center;
+	padding-right: 68px;
+	transition: all 0.2s ease-in-out;
+}
+
+.product-btn {
+	display: inline-block;
+	background-color: #8b8b8b;
+	border-left: 1px solid #6a6a6a;
+	text-align: center;
+	height: 38px;
+	width: 68px;
+	padding: 0 10px;
+  line-height: 38px;
+  color: #ffffff;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: all 0.2s ease-in-out;
+}
+
+.button-group-trigger:hover, .product-btn:hover {
+	text-decoration: none !important;
+	background-color: #6a6a6a;
+	color: #fff;
+}
+
+.icon-price-white {
+	vertical-align: inherit;
+}
+
+
+.product-btn-link {
+	position: absolute;
+	bottom: 0;
+	right: 25px;
+	font-size: 0.5em;
+    line-height: 10px;
+    color: #fff;
+}
+
+.pagination > li > a, .pagination > li > span {
+  color: #8b8b8b;
+}
+
+.pagination > li > a:hover, .pagination > li > span:hover, .pagination > li > a:focus, .pagination > li > span:focus {
+  color: #8b8b8b;
+}
+
+.pagination > .active > a, .pagination > .active > span, .pagination > .active > a:hover, .pagination > .active > span:hover, .pagination > .active > a:focus, .pagination > .active > span:focus {
+  background-color: #8b8b8b;
+  border-color: #8b8b8b;
+}
+
+@media all and (min-width: 768px){
+  #content .col-sm-2:nth-child(6n+1), #content .col-sm-3:nth-child(4n+1), #content .col-sm-4:nth-child(3n+1), #content .col-sm-6:nth-child(2n+1) {
+      clear: left;
+  }
+}
+
+@media all and (max-width: 767px) and (min-width: 480px) {
+  #content .col-xs-2:nth-child(6n+1), #content .col-xs-3:nth-child(4n+1), #content .col-xs-4:nth-child(3n+1), #content .col-xs-6:nth-child(2n+1) {
+      clear: left;
+  }
+}
+
+
+
+

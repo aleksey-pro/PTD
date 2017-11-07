@@ -6,9 +6,11 @@
   background-position: right center;
   height: 357px;
   position: relative;
+  overflow-x: hidden;
 
   @include xs-tablets {
     background-position: left center;
+    overflow-x: unset;
   }
 
 }
@@ -79,29 +81,26 @@
 
 // menu
 
+.header-wrapper {
+  margin-bottom: 30px;
+}
+
 .navbar-custom {
   position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
-  min-height: 82px;
+  height: 82px;
   border: none;
   margin-bottom: 0;
+  z-index: 100;
   background-color: rgba(#f8f8f8, 0.5);
-  line-height: 82px;
   border-radius: unset;
   box-shadow: 0 3px 20px rgba(0, 0, 0, 0.5);
 
   li a {
     color: #000000 !important;
   }
-
-
-  @include xs-tablets {
-    min-height: 1px;
-    line-height: 1;
-  }
-
 
   @include phones {
    min-height: 52px;
@@ -111,17 +110,27 @@
 }
 
 
+.navbar {
+  margin-bottom: 0;
+}
+
+
 .navbar-header {
   float: none;
   text-align: center;
   text-transform: uppercase;
   position: relative;
+  line-height: 82;
+  font-size: 0;
 }
+
 
 .navbar-header li {
   float: none;
   display: inline-block;
   width: 200px;
+  font-size: 14px;
+  line-height: 82px;
 
   @media all and (max-width: 1250px) {
     width: 180px;
@@ -163,7 +172,7 @@
   margin-left: -15px !important;
 
   @include xs-tablets {
-    background-color: #fff;
+    background-color: rgba(#fff, 0.85);
   }
 
 }
@@ -172,14 +181,14 @@
   content: '';
   display: block;
   background-image: url(../images/sprite.png);
-  background-position: -230px -176px;
+  background-position: -230px -164px;
   width: 1px;
   height: 81px;
   position: absolute;
   right: 0;
   bottom: 0;
 
-  @include phones {
+  @include xs-tablets {
     display: none;
   }
 }
@@ -188,14 +197,14 @@
   content: '';
   display: block;
   background-image: url(../images/sprite.png);
-  background-position: -230px -176px;
+  background-position: -230px -164px;
   width: 1px;
   height: 81px;
   position: absolute;
   left: 0;
   bottom: 0;
 
-  @include phones {
+  @include xs-tablets {
     display: none;
   }
 }
@@ -234,6 +243,16 @@
 
   @media (min-width: 768px) {
     display: none;
+  }
+}
+
+.navbar-toggle{
+  border-color: #ddd;
+  margin-right: 20px;
+  background-color: rgb(221, 221, 221);
+
+  .icon-bar {
+    background-color: #888;
   }
 }
 
